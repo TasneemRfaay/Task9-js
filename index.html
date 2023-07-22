@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="book" class="d-flex flex-column align-items-center my-3">
+        <h1 class="m-5">Bookmarker</h1>
+      </div>
+      <div id="" class="d-flex flex-column align-items-center my-3">
+        <h3>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h3>
+      </div>
+
+      <form action="" class="was-validated">
+        <label for="name" class="fw-bold">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          Site Name
+        </label>
+        <input
+          class="form-control my-3"
+          type="text"
+          id="name"
+          placeholder="Bookmark Name"
+          required
+          minlength="3"
+        />
+        <div class="valid-feedback">Valid.</div>
+
+        <label for="url" class="fw-bold">
+          <i class="fa-solid fa-link pe-2"></i>
+          Site URL
+        </label>
+        <input
+          type="text"
+          class="form-control my-3"
+          id="url"
+          minlength="9"
+          placeholder="Website URL"
+          required
+        />
+        <div class="valid-feedback">Valid.</div>
+        <div id="divBtn" class="d-flex flex-column align-items-center my-3">
+          <button
+            type="button"
+            class="btn btn-danger px-5 py-1 my-3"
+            onclick="books()"
+            id="btn"
+          >
+            submit
+          </button>
+          <h5 class=""></h5>
+        </div>
+      </form>
+      <table class="w-100 text-center bg-light">
+        <thead class="py-5">
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
